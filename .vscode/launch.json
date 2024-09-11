@@ -8,6 +8,13 @@
             "type": "java",
             "name": "BlueprintApplication",
             "request": "launch",
+            "mainClass": "edu.eci.arsw.blueprints.main.BlueprintApplication",
+            "projectName": "blueprints-middleware"
+        },
+        {
+            "type": "java",
+            "name": "BlueprintApplication",
+            "request": "launch",
             "mainClass": "edu.eci.arsw.blueprints.controller.BlueprintApplication",
             "projectName": "blueprints-middleware"
         }

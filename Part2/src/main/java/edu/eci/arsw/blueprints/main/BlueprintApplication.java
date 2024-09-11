@@ -1,4 +1,4 @@
-package edu.eci.arsw.blueprints.controller;
+package edu.eci.arsw.blueprints.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
