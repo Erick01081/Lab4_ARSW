@@ -21,37 +21,60 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class BlueprintsServices {
-   
+
     @Autowired
-    BlueprintsPersistence bpp=null;
-    
-    public void addNewBlueprint(Blueprint bp){
-        
+    BlueprintsPersistence bpp;
+
+    public void addNewBlueprint(Blueprint bp) {
+        try {
+            bpp.saveBlueprint(bp);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
+
     }
-    
-    public Set<Blueprint> getAllBlueprints(){
+
+    public Set<Blueprint> getAllBlueprints() {
         return null;
     }
-    
+
     /**
      * 
      * @param author blueprint's author
-     * @param name blueprint's name
+     * @param name   blueprint's name
      * @return the blueprint of the given name created by the given author
      * @throws BlueprintNotFoundException if there is no such blueprint
      */
-    public Blueprint getBlueprint(String author,String name) throws BlueprintNotFoundException{
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public Blueprint getBlueprint(String author, String name) throws BlueprintNotFoundException {
+        try {
+            return bpp.getBlueprint(author, name);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
+
     }
-    
+
     /**
      * 
      * @param author blueprint's author
      * @return all the blueprints of the given author
      * @throws BlueprintNotFoundException if the given author doesn't exist
      */
-    public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public Blueprint getBlueprintsByAuthor(String author) throws BlueprintNotFoundException {
+        try {
+            return bpp.getBlueprintByAuthor(author);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
     }
-    
+
+    public Blueprint getBlueprintsByName(String name) throws BlueprintNotFoundException {
+
+        try {
+            return bpp.getBlueprintByName(name);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
+    }
+
 }

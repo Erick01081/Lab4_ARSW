@@ -17,26 +17,26 @@ import java.util.Map;
  *
  * @author hcadavid
  */
-public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
+public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
 
-    private final Map<Tuple<String,String>,Blueprint> blueprints=new HashMap<>();
+    private final Map<Tuple<String, String>, Blueprint> blueprints = new HashMap<>();
+    private Blueprint bpp;
 
     public InMemoryBlueprintPersistence() {
-        //load stub data
-        Point[] pts=new Point[]{new Point(140, 140),new Point(115, 115)};
-        Blueprint bp=new Blueprint("_authorname_", "_bpname_ ",pts);
-        blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        
-    }    
-    
+        // load stub data
+        Point[] pts = new Point[] { new Point(140, 140), new Point(115, 115) };
+        Blueprint bp = new Blueprint("_authorname_", "_bpname_ ", pts);
+        blueprints.put(new Tuple<>(bp.getAuthor(), bp.getName()), bp);
+
+    }
+
     @Override
     public void saveBlueprint(Blueprint bp) throws BlueprintPersistenceException {
-        if (blueprints.containsKey(new Tuple<>(bp.getAuthor(),bp.getName()))){
-            throw new BlueprintPersistenceException("The given blueprint already exists: "+bp);
+        if (blueprints.containsKey(new Tuple<>(bp.getAuthor(), bp.getName()))) {
+            throw new BlueprintPersistenceException("The given blueprint already exists: " + bp);
+        } else {
+            blueprints.put(new Tuple<>(bp.getAuthor(), bp.getName()), bp);
         }
-        else{
-            blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        }        
     }
 
     @Override
@@ -44,6 +44,27 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         return blueprints.get(new Tuple<>(author, bprintname));
     }
 
-    
-    
+    @Override
+    public Blueprint getBlueprintByAuthor(String author) throws BlueprintNotFoundException {
+        for (Map.Entry<Tuple<String, String>, Blueprint> entry : blueprints.entrySet()) {
+            Blueprint value = entry.getValue();
+            if (author.equals(value.getAuthor())) {
+                return value;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Blueprint getBlueprintByName(String name) throws BlueprintNotFoundException {
+        for (Map.Entry<Tuple<String, String>, Blueprint> entry : blueprints.entrySet()) {
+            Blueprint value = entry.getValue();
+            if (name.equals(value.getName())) {
+                return value;
+            }
+        }
+        return null;
+
+    }
+
 }
