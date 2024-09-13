@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BlueprintsApp",
+            "request": "launch",
+            "mainClass": "edu.eci.arsw.blueprints.main.BlueprintsApp",
+            "projectName": "blueprints-middleware"
+        },
+        {
+            "type": "java",
             "name": "BlueprintApplication",
             "request": "launch",
             "mainClass": "edu.eci.arsw.blueprints.main.BlueprintApplication",

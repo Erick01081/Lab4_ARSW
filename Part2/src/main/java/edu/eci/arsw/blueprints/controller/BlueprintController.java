@@ -13,45 +13,49 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.eci.arsw.blueprints.model.Blueprint;
 import edu.eci.arsw.blueprints.services.BlueprintsServices;
 
-@RestController
+
 public class BlueprintController {
-    private final BlueprintsServices bp;
 
     @Autowired
+    private final BlueprintsServices bp;
+
+
     public BlueprintController(BlueprintsServices bp) {
         this.bp = bp;
     }
 
-    @RequestMapping(value = "/consultspecific", method = RequestMethod.GET)
-    public ResponseEntity<String> consultSpecific(@RequestBody String author, String name) {
+    public Blueprint consultSpecific(String author, String name) {
         try {
-            return ResponseEntity.ok(bp.getBlueprint(author, name).toString());
+            return bp.getBlueprint(author, name);
         } catch (Exception e) {
-            return new ResponseEntity<>("Invalid input", HttpStatus.BAD_REQUEST);
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    
+    public Blueprint consult(String author) {
+        try {
+            return bp.getBlueprintsByAuthor(author);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
-    @RequestMapping(value = "/consultAuthor", method = RequestMethod.GET)
-    public ResponseEntity<String> consult(@RequestBody String author) {
+    
+    public Blueprint consultByName(String name) {
         try {
-            return ResponseEntity.ok(bp.getBlueprintsByAuthor(author).toString());
+            return bp.getBlueprintsByName(name);
         } catch (Exception e) {
-            return new ResponseEntity<>("Invalid input", HttpStatus.BAD_REQUEST);
+            e.printStackTrace();
+            return null;
         }
     }
 
-    @RequestMapping(value = "/consultName", method = RequestMethod.GET)
-    public ResponseEntity<String> consultByName(String name) {
-        try {
-            return ResponseEntity.ok(bp.getBlueprintsByName(name).toString());
-        } catch (Exception e) {
-            return new ResponseEntity<>("Invalid input", HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public ResponseEntity<String> register(@RequestBody Blueprint blueprint) {
+    
+    public void register(Blueprint blueprint) {
         bp.addNewBlueprint(blueprint);
-        return ResponseEntity.ok("Save");
     }
 }

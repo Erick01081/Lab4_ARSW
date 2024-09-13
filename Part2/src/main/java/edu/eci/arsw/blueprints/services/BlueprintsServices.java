@@ -9,7 +9,10 @@ import edu.eci.arsw.blueprints.model.Blueprint;
 import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
+import edu.eci.arsw.blueprints.persistence.impl.InMemoryBlueprintPersistence;
+
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class BlueprintsServices {
 
+
     @Autowired
     BlueprintsPersistence bpp;
 
@@ -29,14 +33,15 @@ public class BlueprintsServices {
         try {
             bpp.saveBlueprint(bp);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new UnsupportedOperationException("Not supported yet.");
         }
 
     }
 
-    public Set<Blueprint> getAllBlueprints() {
-        return null;
-    }
+    public List<Blueprint> getAllBlueprints() {
+        return bpp.getAllBluePrints();
+    } 
 
     /**
      * 
@@ -49,6 +54,7 @@ public class BlueprintsServices {
         try {
             return bpp.getBlueprint(author, name);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new UnsupportedOperationException("Not supported yet.");
         }
 

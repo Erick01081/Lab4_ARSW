@@ -5,7 +5,10 @@
  */
 package edu.eci.arsw.blueprints.persistence;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import edu.eci.arsw.blueprints.model.Blueprint;
 
@@ -43,5 +46,7 @@ public interface BlueprintsPersistence {
     public Blueprint getBlueprintByAuthor(String author) throws BlueprintNotFoundException;
 
     public Blueprint getBlueprintByName(String name) throws BlueprintNotFoundException;
+
+    public List<Blueprint> getAllBluePrints();
 
 }
