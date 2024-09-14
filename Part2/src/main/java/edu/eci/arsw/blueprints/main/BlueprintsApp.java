@@ -36,9 +36,9 @@ public class BlueprintsApp implements CommandLineRunner {
         System.out.println(bp0);
 
         while(running){
-            System.out.println("<========== GESTOR DE PLANOS ==========>");
+            System.out.println("=====Aplicación de Gestor de Planos=====");
             System.out.println("");
-            System.out.println("Digite una opción:\n1.Buscar plano por autor y nombre\n2.Consultar planos de un autor\n3.Registrar un nuevo plano\n4.Consultar todos los planos");
+            System.out.println("Digita una opción:\n1.Buscar plano por autor y nombre\n2.Consultar planos de un autor\n3.Registrar un nuevo plano\n4.Consultar todos los planos");
             System.out.println("");
             String selection0 = scanner.nextLine();
 
@@ -61,14 +61,14 @@ public class BlueprintsApp implements CommandLineRunner {
                 String author = scanner.nextLine();
                 System.out.println("Digite el nombre del plano");
                 String name = scanner.nextLine();
-                System.out.println("Digite el numero de puntos que tendrá su plano");
+                System.out.println("Digite el numero de puntos que tendrá el plano");
                 String points= scanner.nextLine();
                 int numberOfPoints= Integer.parseInt(points);
 
                 bbpServices.addNewBlueprint(new Blueprint(author,name,getPointsFromUser(numberOfPoints)));
             }
             else if(selection0.equals("4")){
-                System.out.println("Aqui tienes todos los planos existente hasta el momento!");
+                System.out.println("Planos existentes: ");
                 System.out.println(bbpServices.getAllBlueprints());
             }
         }
