@@ -1,11 +1,16 @@
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintNotFoundException.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\model\Point.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintPersistenceException.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintsPersistence.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\controller\BlueprintApplication.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\controller\BlueprintController.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\model\Blueprint.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\controller\AppConfig.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\BlueprintsServices.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\impl\Tuple.java
-C:\Users\luzma\Desktop\ARSW\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\impl\InMemoryBlueprintPersistence.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\controller\AppConfig.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\controller\BlueprintController.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\main\BlueprintsApp.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\model\Blueprint.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\model\Point.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintNotFoundException.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintPersistenceException.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\BlueprintsPersistence.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\impl\InMemoryBlueprintPersistence.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\persistence\impl\Tuple.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\BlueprintsServices.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\Filter.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\RedundancyFilter.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\Sub.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\Subs.java
+C:\Users\Erick\Documents\Arsw 4\Lab4_ARSW\Part2\src\main\java\edu\eci\arsw\blueprints\services\SubsamplingFilter.java

@@ -8,16 +8,7 @@ import edu.eci.arsw.blueprints.model.Point;
 
 public class SubsamplingFilter implements Filter{
 
-    private static SubsamplingFilter filter;
-
-    private SubsamplingFilter(){}
-
-    public static SubsamplingFilter getFilter(){
-        if(filter == null){
-            filter = new SubsamplingFilter();
-        }
-        return filter;
-    }
+    public SubsamplingFilter(){}
 
     @Override
     public Blueprint filterPlain(Blueprint bp){

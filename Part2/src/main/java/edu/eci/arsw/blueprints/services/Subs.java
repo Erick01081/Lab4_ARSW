@@ -9,7 +9,7 @@ public class Subs implements Filter{
 
     private static RedundancyFilter filter;
 
-    private RedundancyFilter(){}
+    private void RedundancyFilter(){}
 
     public static RedundancyFilter getFilter(){
         if(filter == null){

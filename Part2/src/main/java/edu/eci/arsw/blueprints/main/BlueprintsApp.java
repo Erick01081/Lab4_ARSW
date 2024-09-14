@@ -14,7 +14,7 @@ import edu.eci.arsw.blueprints.services.BlueprintsServices;
 
 @SpringBootApplication(scanBasePackages = {"edu.eci.arsw.blueprints"})
 public class BlueprintsApp implements CommandLineRunner {
-    
+
     @Autowired
     BlueprintsServices bbpServices;
 
